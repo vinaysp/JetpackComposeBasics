@@ -60,7 +60,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, widthDp = 320)
 @Composable
 fun GreetingPreview() {
     BasicCodelabJetpackComposeEssentialsTheme {
