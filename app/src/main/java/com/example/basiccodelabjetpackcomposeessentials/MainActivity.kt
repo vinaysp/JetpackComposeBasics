@@ -48,14 +48,13 @@ fun MyApp(
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Surface(color = MaterialTheme.colorScheme.primary) {
-        Column(modifier = Modifier.padding(24.dp)){
-            Text(
-                text = "Hello"
-            )
-            Text(
-                text = "$name!"
-            )
+    Surface(
+        color = MaterialTheme.colorScheme.primary,
+        modifier = modifier.padding(vertical = 4.dp, horizontal = 8.dp)
+    ) {
+        Column(modifier = Modifier.fillMaxWidth().padding(24.dp)) {
+            Text(text = "Hello ")
+            Text(text = name)
         }
 
     }
