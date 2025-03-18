@@ -67,8 +67,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 Text(text = "Hello ")
                 Text(text = name)
             }
-            ElevatedButton(onClick = {}) {
-                Text("Show more")
+            ElevatedButton(onClick = {expanded.value = !expanded.value}) {
+                Text(if (expanded.value) "Show less" else "Show more")
             }
         }
     }
