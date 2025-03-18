@@ -81,3 +81,32 @@ fun GreetingPreview() {
         MyApp()
     }
 }
+
+
+@Composable
+fun OnboardingScreen(modifier: Modifier = Modifier) {
+    // TODO: This state should be hoisted
+    var shouldShowOnboarding = remember { mutableStateOf(true) }
+
+    Column(
+        modifier = modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text("Welcome to the Basics Codelab!")
+        Button(
+            modifier = Modifier.padding(vertical = 24.dp),
+            onClick = { shouldShowOnboarding.value = false }
+        ) {
+            Text("Continue")
+        }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 320, heightDp = 320)
+@Composable
+fun OnboardingPreview() {
+    BasicCodelabJetpackComposeEssentialsTheme {
+        OnboardingScreen()
+    }
+}
